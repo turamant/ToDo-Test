@@ -1,0 +1,20 @@
+
+<div class="d-flex align-items-center justify-content-center mt-20">
+  <div class= "content text-center">
+    <h1 class="text-primary" style="font-size:50px;">Todo App</h1>
+    <p> Следите за тем, что нужно сделать!</p>
+      
+    {% if not user.is_authenticated %}
+    <p>  Для начала зарегистрируйте
+    <span 
+    hx-get="{% url 'account_signup' %}" 
+    hx-target="#authentication"
+    hx-trigger="click"
+    class= "hyperlink-underline"
+    >
+    account
+    </span>.
+    {% endif %}
+        
+    </div>
+</div>
